@@ -4,5 +4,15 @@
   "main": "index.js",
   "repository": "https://github.com/leonardomso/graphql-101.git",
   "author": "leonardomso <leonardomso11@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "dotenv": "^6.2.0",
+    "graphql": "^14.1.1",
+    "graphql-tools": "^4.0.4",
+    "graphql-yoga": "^1.17.0",
+    "merge-graphql-schemas": "^1.5.8",
+    "mongoose": "^5.4.6",
+    "nodemon": "^1.18.9"
+  }
 }
