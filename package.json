@@ -1,0 +1,8 @@
+{
+  "name": "graphql-101",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/leonardomso/graphql-101.git",
+  "author": "leonardomso <leonardomso11@gmail.com>",
+  "license": "MIT"
+}
