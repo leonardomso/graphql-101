@@ -19,7 +19,7 @@ const AuthorSchema = new Schema({
         required: true
     },
     age: {
-        type: Boolean,
+        type: Number,
         required: true
     },
     books: [{
@@ -28,4 +28,4 @@ const AuthorSchema = new Schema({
     }]
 })
 
-export default mongoose.model('Book', AuthorSchema);
+export default mongoose.model('Author', AuthorSchema);

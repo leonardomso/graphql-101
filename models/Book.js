@@ -14,12 +14,12 @@ const BookSchema = new Schema({
         type: String,
         required: true
     },
-    body: {
+    description: {
         type: String,
         required: true
     },
-    published: {
-        type: Boolean,
+    language: {
+        type: String,
         required: true
     },
     author: {
