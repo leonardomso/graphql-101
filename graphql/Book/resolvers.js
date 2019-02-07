@@ -1,15 +1,16 @@
-import BookConnector from "../../connectors/Book";
+import BookConnector from "../../connectors/Book/Book";
+import AuthorConnector from "../../connectors/Author/Author";
 
 const resolvers = {
     Query: {
         getBook: async (parent, { _id }, context, info) => {
             return await BookConnector.getBook({ _id })
-                .then(user => user)
+                .then(book => book)
                 .catch(err => err);
         },
         getAllBooks: async (parent, args, context, info) => {
             return await BookConnector.getAllBooks()
-                .then(user => user)
+                .then(books => books)
                 .catch(err => err);
         }
     },
@@ -20,22 +21,28 @@ const resolvers = {
             context,
             info
         ) => {
-            return await PostConnector.createBook({
+            return await BookConnector.createBook({
                 title,
                 description,
                 language,
                 author
             })
-                .then(post => post)
+                .then(book => book)
                 .catch(err => err);
         },
         deleteBook: async (parent, { _id }, context, info) => {
-            return await PostConnector.deleteBook({ _id })
-                .then(post => post)
+            return await BookConnector.deleteBook({ _id })
+                .then(book => book)
                 .catch(err => err);
         }
     },
-    Author: {}
+    Book: {
+        author: async ({ _id }, args, context, info) => {
+            return AuthorConnector.books(_id)
+                .then(author => author)
+                .catch(err => err);
+        }
+    }
 };
 
 export default resolvers;
