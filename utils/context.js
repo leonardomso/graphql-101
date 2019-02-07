@@ -6,7 +6,7 @@ import { getTokenFromRequest } from "./auth";
 const pubsub = new PubSub();
 
 export const context = ({ request }) => ({
-  models,
-  pubsub,
-  token: getTokenFromRequest(request)
+    models,
+    pubsub,
+    token: getTokenFromRequest(request)
 });

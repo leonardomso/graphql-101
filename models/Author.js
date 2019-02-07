@@ -4,7 +4,7 @@ import { ObjectID } from "mongodb";
 const Schema = mongoose.Schema;
 
 // The best way to work with IDs in GraphQL and MongoDB
-// is making the ID returning as a String. 
+// is making the ID returning as a String.
 ObjectID.prototype.valueOf = function() {
     return this.toString();
 };
@@ -22,10 +22,12 @@ const AuthorSchema = new Schema({
         type: Number,
         required: true
     },
-    books: [{
-        type: Schema.Types.ObjectId,
-        ref: "Book"
-    }]
-})
+    books: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Book"
+        }
+    ]
+});
 
-export default mongoose.model('Author', AuthorSchema);
+export default mongoose.model("Author", AuthorSchema);
