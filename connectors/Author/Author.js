@@ -14,10 +14,11 @@ const AuthorConnector = {
             .then(authors => authors)
             .catch(err => err);
     },
-    createAuthor: async ({ firstName, password }) => {
+    createAuthor: async ({ firstName, lastName, age }) => {
         const newAuthor = await new Author({
             firstName,
-            password
+            lastName,
+            age
         });
 
         return new Promise((resolve, reject) => {
@@ -29,8 +30,8 @@ const AuthorConnector = {
     deleteAuthor: async ({ _id }) => {
         return await Author.findOneAndDelete({ _id });
     },
-    book: async ({ book }) => {
-        return await Book.findById(book);
+    books: async ({ _id }) => {
+        return await Book.find({ author: _id });
     }
 };
 

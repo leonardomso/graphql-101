@@ -15,10 +15,16 @@ const resolvers = {
         }
     },
     Mutation: {
-        createAuthor: async (parent, { email, password }, context, info) => {
+        createAuthor: async (
+            parent,
+            { firstName, lastName, age },
+            context,
+            info
+        ) => {
             return await AuthorConnector.createAuthor({
-                email,
-                password
+                firstName,
+                lastName,
+                age
             })
                 .then(author => author)
                 .catch(err => err);
@@ -31,7 +37,7 @@ const resolvers = {
     },
     Author: {
         books: async ({ _id }, args, context, info) => {
-            return BookConnector.books(_id)
+            return AuthorConnector.books(_id)
                 .then(books => books)
                 .catch(err => err);
         }
