@@ -7,7 +7,7 @@ const resolvers = {
         createAuthor: async (parent, args, context, info) => {},
         deleteAuthor: async (parent, args, context, info) => {},
     },
-    Author: {}
+    Book: {}
 };
 
 export default resolvers;
