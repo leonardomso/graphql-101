@@ -14,7 +14,7 @@ const typeDefs = `
 
     type Mutation {
         createBook(title: String!, description: String!, language: String!, author: ID!): Book!
-        deleteBook(_id: ID!): Book
+        deleteBook(_id: ID!): Book!
     }
 `;
 

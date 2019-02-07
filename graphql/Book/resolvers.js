@@ -37,8 +37,8 @@ const resolvers = {
         }
     },
     Book: {
-        author: async ({ _id }, args, context, info) => {
-            return AuthorConnector.books(_id)
+        author: async ({ author }, args, context, info) => {
+            return BookConnector.author({ author })
                 .then(author => author)
                 .catch(err => err);
         }

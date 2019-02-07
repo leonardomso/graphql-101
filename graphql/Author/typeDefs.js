@@ -13,8 +13,8 @@ const typeDefs = `
     }
 
     type Mutation {
-        createAuthor(firstName: String!, lastName: String!, age: Int!): Author
-        deleteAuthor(_id: ID!): Author
+        createAuthor(firstName: String!, lastName: String!, age: Int!): Author!
+        deleteAuthor(_id: ID!): Author!
     }
 `;
 
