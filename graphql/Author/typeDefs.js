@@ -16,6 +16,12 @@ const typeDefs = `
         createAuthor(firstName: String!, lastName: String!, age: Int!): Author!
         deleteAuthor(_id: ID!): Author!
     }
+
+    type Subscription {
+        authors: [Author!]!
+        authorAdded: Author!
+        authorDeleted: Author!
+    }
 `;
 
 export default typeDefs;
