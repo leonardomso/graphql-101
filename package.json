@@ -44,6 +44,6 @@
     "merge-graphql-schemas": "^1.5.8",
     "mongoose": "^5.4.6",
     "nodemon": "^1.18.9",
-    "validator": "^10.11.0"
+    "validator": "^13.7.0"
   }
 }
