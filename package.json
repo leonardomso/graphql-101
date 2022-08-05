@@ -42,7 +42,7 @@
     "graphql-yoga": "^1.17.0",
     "jsonwebtoken": "^8.4.0",
     "merge-graphql-schemas": "^1.5.8",
-    "mongoose": "^5.4.6",
+    "mongoose": "^5.7.5",
     "nodemon": "^1.18.9",
     "validator": "^10.11.0"
   }
