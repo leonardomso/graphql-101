@@ -40,7 +40,7 @@
     "graphql": "^14.1.1",
     "graphql-tools": "^4.0.4",
     "graphql-yoga": "^1.17.0",
-    "jsonwebtoken": "^8.4.0",
+    "jsonwebtoken": "^9.0.0",
     "merge-graphql-schemas": "^1.5.8",
     "mongoose": "^5.4.6",
     "nodemon": "^1.18.9",
